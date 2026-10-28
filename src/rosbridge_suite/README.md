@@ -1,4 +1,4 @@
-# 🌐 Rosbridge Suite — Web & ROS 2 Bridge for CHIRON-UV
+# Rosbridge Suite — Web & ROS 2 Bridge for CHIRON-UV
 
 [![ROS 2](https://img.shields.io/badge/ROS%202-Humble-22314E?logo=ros&logoColor=white)](https://docs.ros.org/en/humble/)
 [![WebSocket](https://img.shields.io/badge/Transport-WebSockets%20%7C%20JSON-blue)](https://github.com/RobotWebTools/rosbridge_suite)
@@ -12,7 +12,7 @@
 
 ---
 
-## ⚡ Role in the CHIRON-UV Architecture
+## Role in the CHIRON-UV Architecture
 
 In this project, `rosbridge_server` (WebSocket on port `9090`) and `rosapi` enable the React 18 browser client (`roslibjs`) to communicate seamlessly with ROS 2 nodes without needing a native ROS installation on the client device:
 
@@ -30,7 +30,7 @@ In this project, `rosbridge_server` (WebSocket on port `9090`) and `rosapi` enab
 
 ---
 
-## 🚀 How to Run in CHIRON-UV
+## How to Run in CHIRON-UV
 
 Launched automatically via the dashboard launch file:
 ```bash
@@ -44,7 +44,7 @@ ros2 launch rosbridge_server rosbridge_websocket_launch.xml port:=9090
 
 ---
 
-## 📦 Upstream Rosbridge Suite Details
+## Upstream Rosbridge Suite Details
 
 #### Server Implementations of the rosbridge v2 Protocol
 

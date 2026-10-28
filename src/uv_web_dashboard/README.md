@@ -1,4 +1,4 @@
-# 💻 UV Disinfection Robot — Web Dashboard & Mission Coordinator (`uv_web_dashboard`)
+# UV Disinfection Robot — Web Dashboard & Mission Coordinator (`uv_web_dashboard`)
 
 [![ROS 2](https://img.shields.io/badge/ROS%202-Humble-22314E?logo=ros&logoColor=white)](https://docs.ros.org/en/humble/)
 [![React](https://img.shields.io/badge/Frontend-React%2018%20%7C%20Vite%20%7C%20Tailwind-61DAFB?logo=react&logoColor=white)](https://reactjs.org/)
@@ -13,7 +13,7 @@ The mission control and process coordination package for the **CHIRON-UV** disin
 
 ---
 
-## 📑 Table of Contents
+## Table of Contents
 
 - [Package Structure](#-package-structure)
 - [Key Features](#-key-features)
@@ -25,7 +25,7 @@ The mission control and process coordination package for the **CHIRON-UV** disin
 
 ---
 
-## 📁 Package Structure
+## Package Structure
 
 ```
 uv_web_dashboard/
@@ -53,7 +53,7 @@ uv_web_dashboard/
 
 ---
 
-## 🌟 Key Features
+##  Key Features
 
 1. **Interactive Hospital Map Canvas**: Renders the hospital floor plan with live robot pose ($x, y, \theta$), laser scans, active waypoints, and room boundaries.
 2. **Real-Time UV Dosimetry Heatmap**: Overlays the accumulated UV-C irradiation heatmap dynamically across room floors.
@@ -69,7 +69,7 @@ uv_web_dashboard/
 
 ---
 
-## 🤖 Mission Coordination Architecture (`disinfection_process.py`)
+## Mission Coordination Architecture (`disinfection_process.py`)
 
 The coordinator node executes an autonomous coverage pattern for each targeted room defined in `config/rooms.json`:
 
@@ -85,7 +85,7 @@ $$\text{1. Doorway Approach} \longrightarrow \text{2. Corner 1} \longrightarrow 
 
 ---
 
-## 🛡️ Safety Interlocks & HUD Alerts
+## Safety Interlocks & HUD Alerts
 
 The node continuously monitors `/uvrobot/human_detected` from the YOLOv8 vision pipeline:
 - **Instant Hold**: If a person enters during disinfection, navigation goals are immediately aborted, the mission generation counter is incremented, and `/disinfection/stop` is triggered.
@@ -94,7 +94,7 @@ The node continuously monitors `/uvrobot/human_detected` from the YOLOv8 vision 
 
 ---
 
-## 🌐 Web Frontend Architecture
+## Web Frontend Architecture
 
 - **Framework**: React 18, Vite build tooling, Tailwind CSS.
 - **ROS 2 Communication**: `roslibjs` managing asynchronous WebSocket channels to `rosbridge_server` on port `9090`.
@@ -104,7 +104,7 @@ The node continuously monitors `/uvrobot/human_detected` from the YOLOv8 vision 
 
 ---
 
-## 📡 ROS 2 Interface (Topics, Services, Actions)
+##  ROS 2 Interface (Topics, Services, Actions)
 
 ### Subscriptions
 - `/amcl_pose` (`geometry_msgs/PoseStamped`): Global robot localization.
@@ -122,7 +122,7 @@ The node continuously monitors `/uvrobot/human_detected` from the YOLOv8 vision 
 
 ---
 
-## 🛠️ How to Build & Run
+##  How to Build & Run
 
 ### 1. Build Package
 ```bash
@@ -139,7 +139,7 @@ ros2 launch uv_web_dashboard UV_Dashboard.launch.py
 
 ### 3. Open Web UI
 Open any modern browser and navigate to:
-👉 **`http://localhost:5173`**
+ **`http://localhost:5173`**
 
 *(Optional: Edit and recompile frontend)*
 ```bash

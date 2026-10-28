@@ -1,4 +1,4 @@
-# 📦 CHIRON-UV Workspace Source Directory (`src/`)
+#  CHIRON-UV Workspace Source Directory (`src/`)
 
 This directory houses the ROS 2 packages, web applications, communication bridges, and AI perception pipelines powering the **CHIRON-UV Autonomous Mobile Disinfection Robot**.
 
@@ -9,7 +9,7 @@ This directory houses the ROS 2 packages, web applications, communication bridge
 
 ---
 
-## 🗂️ Packages & Subsystems in `src/`
+##  Packages & Subsystems in `src/`
 
 | Package / Module | Type | Description | Documentation |
 |---|---|---|---|
@@ -20,7 +20,7 @@ This directory houses the ROS 2 packages, web applications, communication bridge
 
 ---
 
-## 🧩 Visual Highlights
+## Visual Highlights
 
 <p align="center">
   <img src="../docs/images/robot_uvc.png" alt="Chiron Robot Model" width="24%" />
@@ -31,7 +31,7 @@ This directory houses the ROS 2 packages, web applications, communication bridge
 
 ---
 
-## 🛠️ Workspace Build Commands
+##  Workspace Build Commands
 
 Build all workspace packages from source using `colcon`:
 
@@ -46,7 +46,7 @@ source install/setup.bash
 
 ---
 
-## 🚀 Running the Full Stack (4-Terminal Guide)
+##  Running the Full Stack (4-Terminal Guide)
 
 Open 4 separate terminal sessions:
 

@@ -1,4 +1,4 @@
-# 🤖 UV Disinfection Robot (`uv_disinfection_robot`)
+#  UV Disinfection Robot (`uv_disinfection_robot`)
 
 [![ROS 2](https://img.shields.io/badge/ROS%202-Humble-22314E?logo=ros&logoColor=white)](https://docs.ros.org/en/humble/)
 [![Gazebo](https://img.shields.io/badge/Gazebo-Classic%2011-orange?logo=gazebo&logoColor=white)](http://gazebosim.org/)
@@ -13,7 +13,7 @@ The core robotics package for the **CHIRON-UV** autonomous mobile disinfection p
 
 ---
 
-## 📑 Table of Contents
+## Table of Contents
 
 - [Package Structure](#-package-structure)
 - [Robot Kinematics & Actuation](#-robot-kinematics--actuation)
@@ -27,7 +27,7 @@ The core robotics package for the **CHIRON-UV** autonomous mobile disinfection p
 
 ---
 
-## 📁 Package Structure
+##  Package Structure
 
 ```
 UV_disinfection_Robot/
@@ -69,7 +69,7 @@ UV_disinfection_Robot/
 
 ---
 
-## 🛞 Robot Kinematics & Actuation
+##  Robot Kinematics & Actuation
 
 The CHIRON-UV robot uses a **holonomic 3-wheel Kiwi omnidirectional drive** (wheels arranged at $120^\circ$ intervals), allowing it to translate in any direction without changing heading and spin concurrently. In addition, it features motorized position-controlled UV-C tube arm mechanisms that extend to optimize surface irradiation.
 
@@ -88,7 +88,7 @@ $$\begin{bmatrix} v_1 \\ v_2 \\ v_3 \end{bmatrix} = \begin{bmatrix} -\sin(0) & \
 
 ---
 
-## 🗺️ Autonomous Navigation (Nav2 & AMCL) & SLAM
+## Autonomous Navigation (Nav2 & AMCL) & SLAM
 
 CHIRON-UV integrates the ROS 2 Navigation2 stack configured for omnidirectional holonomic motion and SLAM Toolbox for online map building.
 
@@ -108,7 +108,7 @@ CHIRON-UV integrates the ROS 2 Navigation2 stack configured for omnidirectional 
 
 ---
 
-## ☀️ Physics-Based UV Dosimetry Engine
+##  Physics-Based UV Dosimetry Engine
 
 The `uv_irradiation_coverage.py` node computes real-time germicidal UV-C irradiation and cumulative dose across 3D surfaces and 2D floor areas.
 
@@ -143,7 +143,7 @@ UV-C radiation (254 nm) breaks down organic DNA/RNA and causes photokeratitis an
 
 ---
 
-## 🚀 Launch Files Reference
+##  Launch Files Reference
 
 | Launch File | Description | Key Arguments |
 |---|---|---|
@@ -156,7 +156,7 @@ UV-C radiation (254 nm) breaks down organic DNA/RNA and causes photokeratitis an
 
 ---
 
-## 📡 Topics, Services & Actions
+##  Topics, Services & Actions
 
 ### Topics Published
 - `/uvrobot/disinfection_stats` (`std_msgs/String`): Coverage %, elapsed time, accumulated dose.
@@ -173,7 +173,7 @@ UV-C radiation (254 nm) breaks down organic DNA/RNA and causes photokeratitis an
 
 ---
 
-## 🛠️ Build & Run
+##  Build & Run
 
 ```bash
 cd /home/aziz/ros2_UV_disinfection_Robot_ws
