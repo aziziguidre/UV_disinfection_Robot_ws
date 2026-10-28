@@ -1,0 +1,109 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 100
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    left_joint_velocity_controller:
+      type: velocity_controllers/JointGroupVelocityController
+
+    back_joint_velocity_controller:
+      type: velocity_controllers/JointGroupVelocityController
+
+    right_joint_velocity_controller:
+      type: velocity_controllers/JointGroupVelocityController
+
+    front_height_controller:
+      type: position_controllers/JointGroupPositionController
+
+    back_height_controller:
+      type: position_controllers/JointGroupPositionController
+
+    left_height_controller:
+      type: position_controllers/JointGroupPositionController
+
+    right_height_controller:
+      type: position_controllers/JointGroupPositionController
+
+    front_angle_controller:
+      type: position_controllers/JointGroupPositionController
+
+    back_angle_controller:
+      type: position_controllers/JointGroupPositionController
+
+    left_angle_controller:
+      type: position_controllers/JointGroupPositionController
+
+    right_angle_controller:
+      type: position_controllers/JointGroupPositionController
+
+joint_state_broadcaster:
+  ros__parameters:
+    joints:
+      - rim_left_joint
+      - rim_back_joint
+      - rim_right_joint
+      - front_servo_base_joint
+      - back_servo_base_joint
+      - left_servo_base_joint
+      - right_servo_base_joint
+      - front_base_tube_joint
+      - back_base_tube_joint
+      - left_base_tube_joint
+      - right_base_tube_joint
+
+left_joint_velocity_controller:
+  ros__parameters:
+    joints:
+      - rim_left_joint
+
+back_joint_velocity_controller:
+  ros__parameters:
+    joints:
+      - rim_back_joint
+
+right_joint_velocity_controller:
+  ros__parameters:
+    joints:
+      - rim_right_joint
+
+front_height_controller:
+  ros__parameters:
+    joints:
+      - front_servo_base_joint
+
+back_height_controller:
+  ros__parameters:
+    joints:
+      - back_servo_base_joint
+
+left_height_controller:
+  ros__parameters:
+    joints:
+      - left_servo_base_joint
+
+right_height_controller:
+  ros__parameters:
+    joints:
+      - right_servo_base_joint
+
+front_angle_controller:
+  ros__parameters:
+    joints:
+      - front_base_tube_joint
+
+back_angle_controller:
+  ros__parameters:
+    joints:
+      - back_base_tube_joint
+
+left_angle_controller:
+  ros__parameters:
+    joints:
+      - left_base_tube_joint
+
+right_angle_controller:
+  ros__parameters:
+    joints:
+      - right_base_tube_joint
