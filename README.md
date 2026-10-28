@@ -1,4 +1,4 @@
-# 🤖 CHIRON-UV: Autonomous Hospital UV-C Disinfection Robot
+#  CHIRON-UV: Autonomous Hospital UV-C Disinfection Robot
 
 [![ROS 2](https://img.shields.io/badge/ROS%202-Humble%20Hawksbill-22314E?logo=ros&logoColor=white)](https://docs.ros.org/en/humble/)
 [![Gazebo](https://img.shields.io/badge/Gazebo-Classic%2011-orange?logo=gazebo&logoColor=white)](http://gazebosim.org/)
@@ -18,7 +18,7 @@ The system combines **3-wheel holonomic omnidirectional drive**, **3D volumetric
 
 ---
 
-## 📑 Table of Contents
+##  Table of Contents
 
 - [Key Features](#-key-features)
 - [System Architecture](#-system-architecture)
@@ -37,9 +37,9 @@ The system combines **3-wheel holonomic omnidirectional drive**, **3D volumetric
 
 ---
 
-## 🌟 Key Features
+##  Key Features
 
-### 1. 🛞 Omnidirectional Mobile Platform & Actuation
+### 1.  Omnidirectional Mobile Platform & Actuation
 - **Holonomic 3-Omniwheel Kiwi Drive** with custom URDF / Xacro kinematics, continuous velocity control via `ros2_control`, and custom odometry publisher.
 - **Motorized UV-C Emitter Tube Arms**: Extendable position-controlled UV lamp actuators for targeted high-contact surface exposure.
 
@@ -49,7 +49,7 @@ The system combines **3-wheel holonomic omnidirectional drive**, **3D volumetric
   <img src="docs/images/tubes_uvc_mecanisme.png" alt="Actuated UV Tubes" width="32%" />
 </p>
 
-### 2. 🗺️ Autonomous Nav2 Room Coverage
+### 2.  Autonomous Nav2 Room Coverage
 - Integrated **Navigation2 (Nav2)** with AMCL localization, global/local costmaps, and DWBP / Regulated Pure Pursuit controllers.
 - **Automated Room Traversal Strategy**:
   $$\text{Door Waypoint} \longrightarrow \text{Corner 1} \longrightarrow \text{Corner 2} \longrightarrow \text{Corner 3} \longrightarrow \text{Corner 4} \longrightarrow \text{Center} \longrightarrow \text{360}^\circ \text{ Disinfection Spin}$$
@@ -60,7 +60,7 @@ The system combines **3-wheel holonomic omnidirectional drive**, **3D volumetric
   <img src="docs/images/trajectory_comparison.png" alt="Trajectory Comparison" width="49%" />
 </p>
 
-### 3. ☀️ Physics-Based UV-C Dosimetry Engine
+### 3. Physics-Based UV-C Dosimetry Engine
 - Computes real-time irradiance and cumulative dose on 3D surfaces and 2D floor grids using the **Inverse-Square Law**:
   $$E = \min\left(\frac{P_{\text{UV}}}{4\pi (d^2 + r_0^2)}, E_{\max}\right), \quad D = \int E \, dt$$
 - **OctoMap 3D PointCloud2 Surface Raytracing** and **2D Floor Heatmap Generation** utilizing a custom multi-stop Viridis color palette gradient to verify target sterilization thresholds ($J/m^2$ or $\mu W \cdot s / cm^2$).
@@ -69,7 +69,7 @@ The system combines **3-wheel holonomic omnidirectional drive**, **3D volumetric
   <img src="docs/images/heatmap_dose.png" alt="UV Dose Heatmap in RViz" width="75%" />
 </p>
 
-### 4. 👁️ YOLOv8 AI Human Detection & Fail-Safe Emergency Interlock
+### 4.  YOLOv8 AI Human Detection & Fail-Safe Emergency Interlock
 - High-frequency person detection pipeline running on robot camera feed (`/camera/image_raw` / `/rs_color/image_raw`).
 - **Zero-Latency Emergency Shutoff**: Instantly terminates the UV dose server and halts autonomous navigation when any human enters the room, publishing alerts and bounding boxes.
 
@@ -77,7 +77,7 @@ The system combines **3-wheel holonomic omnidirectional drive**, **3D volumetric
   <img src="docs/images/yolov8_detection.png" alt="YOLOv8 Human Detection" width="75%" />
 </p>
 
-### 5. 💻 Modern Mission Control Web Dashboard
+### 5.  Modern Mission Control Web Dashboard
 - Built with **React 18**, **Vite**, **Tailwind CSS**, and **roslibjs** over a WebSocket bridge (`rosbridge_suite`).
 - Features interactive hospital map telemetry, real-time robot pose tracking, live Viridis dose heatmap canvas overlay, MJPEG camera stream, mission progress tracking, room selection, manual teleop controls, and E-Stop.
 
@@ -87,7 +87,7 @@ The system combines **3-wheel holonomic omnidirectional drive**, **3D volumetric
 
 ---
 
-## 📐 System Architecture
+## System Architecture
 
 ```mermaid
 flowchart TD
@@ -146,7 +146,7 @@ flowchart TD
 
 ---
 
-## 📁 Repository Structure
+##  Repository Structure
 
 ```
 ros2_UV_disinfection_Robot_ws/
@@ -179,7 +179,7 @@ ros2_UV_disinfection_Robot_ws/
 
 ---
 
-## 📦 Prerequisites & Dependencies
+## Prerequisites & Dependencies
 
 ### System Requirements
 - **OS**: Ubuntu 22.04 LTS (Jammy Jellyfish)
@@ -214,7 +214,7 @@ pip3 install ultralytics opencv-python numpy
 
 ---
 
-## 🛠️ Installation & Build
+## Installation & Build
 
 1. **Clone the repository**:
    ```bash
@@ -246,7 +246,7 @@ cd ../../..
 
 ---
 
-## 🚀 Quick Start Guide
+##  Quick Start Guide
 
 Launch the full system using 4 terminal sessions:
 
@@ -280,11 +280,11 @@ ros2 launch uv_web_dashboard UV_Dashboard.launch.py
 
 ### Access the Web Dashboard
 Open your browser and navigate to:
-👉 **`http://localhost:5173`**
+ **`http://localhost:5173`**
 
 ---
 
-## 📡 ROS 2 Interface (Topics & Services)
+##  ROS 2 Interface (Topics & Services)
 
 ### Key Published Topics
 | Topic | Type | Description |
@@ -305,7 +305,7 @@ Open your browser and navigate to:
 
 ---
 
-## 🛑 Useful Commands & Process Management
+##  Useful Commands & Process Management
 
 To kill all running simulation and navigation nodes cleanly:
 ```bash
