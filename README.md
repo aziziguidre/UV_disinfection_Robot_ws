@@ -219,7 +219,7 @@ pip3 install ultralytics opencv-python numpy
 1. **Clone the repository**:
    ```bash
    cd ~
-   git clone https://github.com/<YOUR_GITHUB_USERNAME>/ros2_UV_disinfection_Robot_ws.git
+   git clone https://github.com/aziziguidre/ros2_UV_disinfection_Robot_ws.git
    cd ros2_UV_disinfection_Robot_ws
    ```
 
